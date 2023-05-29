@@ -1,7 +1,7 @@
 # Monitoring outgoing connections 
 can be a useful approach to detect potential ransomware activity. 
 
-- Keep in mind that this script will show all outgoing TCP connections, not just those related to ransomware. It can help you identify suspicious or unexpected connections that may require further investigation. It's important to analyze the logged information and take appropriate action based on your findings.
+Keep in mind that this script will show all outgoing TCP connections, not just those related to ransomware. It can help you identify suspicious or unexpected connections that may require further investigation. It's important to analyze the logged information and take appropriate action based on your findings.
 
 ```python
 import psutil
