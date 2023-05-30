@@ -15,6 +15,7 @@ Monitoring outgoing connections can help you identify suspicious or unexpected n
 
 **It's crucial to analyze the logged information and take appropriate actions based on your findings. This script serves as a starting point for maintaining network security and mitigating potential risks.**
 
+## Note
 Please note that this script runs indefinitely. To stop the script, use CTRL+C or the equivalent command in your environment.
 
 - Run the script with appropriate permissions and ensure that the required libraries (psutil) are installed!
