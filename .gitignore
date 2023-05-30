@@ -1,0 +1,11 @@
+# Ignore Python compiled files
+*.pyc
+__pycache__
+
+# Ignore log files
+*.txt
+*.csv
+
+# Ignore OS generated files
+.DS_Store  # Mac OS
+Thumbs.db   # Windows
