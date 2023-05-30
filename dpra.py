@@ -14,8 +14,16 @@ def monitor_outgoing_connections():
                 log_message = f"Outgoing connection detected:\nProcess: {process_name}\nLocal Address: {local_address}\nRemote Address: {remote_address}\n"
                 print(log_message)
                 # You can write the log message to a file for further analysis
+                # Write the log message to a .txt file
+                with open("log.txt", "a") as txt_file:
+                txt_file.write(log_message + "\n")
 
-        time.sleep(1)
+                # or write the log message to a .csv file
+                with open("log.csv", "a") as csv_file:
+                csv_file.write(log_message.replace('\n', ',') + "\n")
+                # or both ;)
+
+                time.sleep(1)
 
 # Start monitoring outgoing connections
 monitor_outgoing_connections()
