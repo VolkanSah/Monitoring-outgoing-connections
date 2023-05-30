@@ -32,4 +32,4 @@ Please note that this script runs indefinitely. To stop the script, use CTRL+C o
 - [Developer Site](https://volkansah.github.io)
 
 ### License
-This project is copyright © [VolkanSah](https://github.com/volkansah) 
+This project is copyright by © [VolkanSah](https://github.com/volkansah) 
