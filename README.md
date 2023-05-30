@@ -1,32 +1,21 @@
-# Monitoring outgoing connections 
-can be a useful approach to detect potential network activity like ransomware, spyware or trojan 
+# Monitoring Outgoing Connections
+This Python script is a handy tool to monitor outgoing network activity. It can be particularly useful in detecting potential security threats such as ransomware, spyware, or trojan activity.
 
-Keep in mind that this script will show all outgoing TCP connections, not just those related to ransomware. It can help you identify suspicious or unexpected connections that may require further investigation. It's important to analyze the logged information and take appropriate action based on your findings.
+# What does the script do?
+The script continuously monitors all outgoing TCP connections from your system. For each established connection, it logs important information such as the name of the process that initiated the connection, and the local and remote addresses involved.
 
-```python
-import psutil
-import socket
-import time
+This logged information is not only printed on the console but is also stored in two file formats for ease of further analysis:
 
-def monitor_outgoing_connections():
-    while True:
-        connections = psutil.net_connections(kind='tcp')
-        for conn in connections:
-            if conn.status == 'ESTABLISHED' and conn.raddr:
-                remote_address = f"{conn.raddr[0]}:{conn.raddr[1]}"
-                local_address = f"{conn.laddr[0]}:{conn.laddr[1]}"
-                process_name = psutil.Process(conn.pid).name()
+- A .txt file, where each connection is logged in a separate line.
+- A .csv file, where each piece of information is separated by commas, making it easy to import and analyze in software like Excel.
+The script saves the log files every five minutes to optimize memory usage.
 
-                # Log the outgoing connection
-                log_message = f"Outgoing connection detected:\nProcess: {process_name}\nLocal Address: {local_address}\nRemote Address: {remote_address}\n"
-                print(log_message)
-                # You can also write the log message to a file for further analysis
+## Why is this useful?
+Monitoring outgoing connections can help you identify suspicious or unexpected network activity. While this script shows all outgoing TCP connections, not just those related to potential threats, it can aid in identifying connections that may warrant further investigation.
 
-        time.sleep(1)
+**It's crucial to analyze the logged information and take appropriate actions based on your findings. This script serves as a starting point for maintaining network security and mitigating potential risks.**
 
-# Start monitor outgoing connections
-monitor_outgoing_connections()
-```
+Please note that this script runs indefinitely. To stop the script, use CTRL+C or the equivalent command in your environment.
 
 - Run the script with appropriate permissions and ensure that the required libraries (psutil) are installed!
 
@@ -42,4 +31,4 @@ monitor_outgoing_connections()
 - [Developer Site](https://volkansah.github.io)
 
 ### License
-This project is copyright © [VolkanSah](https://github.com/volkansah) and is licensed under the [MIT LICENSE](LICENSE). You are free to use, modify, and distribute the code and assets, as long as the copyright notice and permission notice are preserved in all copies or substantial portions of the software."
+This project is copyright © [VolkanSah](https://github.com/volkansah) 
