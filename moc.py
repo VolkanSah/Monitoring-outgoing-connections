@@ -1,3 +1,7 @@
+# Monitoring outgoing connections 05/2023 Version
+# Join us in safeguarding our digital world - one connection at a time. For more insights and understanding, 
+# visit https://github.com/VolkanSah/Monitoring-outgoing-connections. 
+# Your support fuels a safer, more secure online experience for all.
 import psutil
 import socket
 import time
