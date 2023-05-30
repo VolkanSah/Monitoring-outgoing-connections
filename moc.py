@@ -1,7 +1,6 @@
 import psutil
 import socket
 import time
-
 def monitor_outgoing_connections():
     counter = 0
     log_messages = []
