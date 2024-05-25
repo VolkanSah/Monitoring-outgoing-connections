@@ -1,5 +1,5 @@
 # Monitoring Outgoing TCP-Connections
-###### RedTeam Scripts (EDU) by VolkanSah - simple codings for 'Offensive Security' (updated 5/2023)
+
 
 This Python script is a handy tool to monitor outgoing network activity. It can be particularly useful in detecting potential security threats such as ransomware, spyware, or trojan activity.
 
