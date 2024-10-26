@@ -1,6 +1,6 @@
-# Monitoring Outgoing (TCP/UDP) Connections v2.dev
+# Monitoring Outgoing Connections 10/2024 - Version 2 - dev status
 
-This Python script is a robust tool designed to monitor outgoing network activity, specifically focusing on TCP and UDP connections. This can be particularly valuable for identifying potential security threats such as ransomware, spyware, or trojans by tracking outgoing network connections in real time.
+Join us in safeguarding our digital world, one connection at a time. This Python script actively monitors outgoing (TCP/UDP) connections, helping users stay alert to potential security threats, such as ransomware, spyware, or other suspicious network activities.  
 
 ## Features & Improvements
 
@@ -25,12 +25,32 @@ Version 2 has introduced several enhancements that make the script more flexible
    - **CSV**: Structure facilitates data import and analysis with software like Excel or databases.
    - **JSON**: Suitable for structured data handling in applications or for further processing with automation tools.
 
-Examples:
+#### Examples:
+Logs are structured for readability and analysis. Here’s how they appear across formats:
 ```
-TXT: [2024-10-26 14:30:45] TCP | Process: chrome (PID: 1234) | Local: 192.168.1.2:51234 | Remote: 8.8.8.8:443
-CSV: timestamp,protocol,process_name,process_path,pid,local_ip,local_port,remote_ip,remote_port,status
-JSON: {"timestamp": "2024-10-26 14:30:45", "protocol": "TCP", ...}
+
+- **TXT**: `[2024-10-26 14:30:45] TCP | Process: chrome (PID: 1234) | Local: 192.168.1.2:51234 | Remote: 8.8.8.8:443`
+- **CSV**: `timestamp,protocol,process_name,process_path,pid,local_ip,local_port,remote_ip,remote_port,status`
+- **JSON**: `{"timestamp": "2024-10-26 14:30:45", "protocol": "TCP", ...}`
 ```
+
+## Requirements
+
+- **Python 3.x**
+- **psutil** library (Install via `pip install psutil`)
+
+Ensure you have the necessary permissions to access network and process data.
+
+## Configuration Options:
+- Log Directory: Customize the directory where logs are saved (logs by default).
+- Batch Size and Interval: Configure batch size and time intervals for logging in the monitor() method.
+
+### Example Code Snippet
+```
+monitor = ConnectionMonitor(log_dir="custom_logs")
+monitor.monitor(interval=2, batch_size=100)
+```
+Note
 
 
 ### 5. Additional Enhancements
@@ -56,7 +76,10 @@ The script runs indefinitely, continuously logging outgoing connections. You can
 This script can be adjusted to meet specific requirements or integrated into larger security frameworks. We recommend consulting cybersecurity professionals for additional guidance.
 
 ## License
-This project is copyright © [VolkanSah](https://github.com/volkansah)
+This project is copyright © by [VolkanSah](https://github.com/volkansah) you can use it free, but not fpr resell!
 
 ## Thank You!
 Your support is appreciated! If you find this project helpful, consider sharing it, giving a 🌟, or [becoming a sponsor](https://github.com/sponsors/volkansah). Follow for more updates and new projects!
+
+
+   
