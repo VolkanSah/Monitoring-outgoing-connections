@@ -13,7 +13,6 @@ Join us in safeguarding our digital world, one connection at a time. This Python
 6. [Why Monitor Outgoing Connections?](#why-monitor-outgoing-connections)
 7. [Getting Started](#getting-started)
 8. [License](#license)
-9. [Thank You!](#thank-you)
 
 ## Features & Improvements
 
@@ -103,6 +102,6 @@ This script can be adjusted to meet specific requirements or integrated into lar
 
 This project is copyright © by [VolkanSah](https://github.com/volkansah). 
 
-## Thank You!
+## Thanks
 
 Your support is appreciated! If you find this project helpful, consider sharing it, giving a 🌟, or [becoming a sponsor](https://github.com/sponsors/volkansah). Follow for more updates and new projects!
