@@ -1,5 +1,7 @@
 # Monitoring Outgoing TCP-Connections
 
+-> for TCP and UDP use v2-dev
+
 
 This Python script is a handy tool to monitor outgoing network activity. It can be particularly useful in detecting potential security threats such as ransomware, spyware, or trojan activity.
 
