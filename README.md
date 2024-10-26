@@ -38,19 +38,19 @@ Version 2 introduces several enhancements that make the script more flexible, in
    - **CSV**: Structure facilitates data import and analysis with software like Excel or databases.
    - **JSON**: Suitable for structured data handling in applications or for further processing with automation tools.
 
----
+
 
 ## Log Format Examples
 
 Logs are structured for readability and analysis. Here’s how they appear across formats:
 
----
+```
 
 - **TXT**: `[2024-10-26 14:30:45] TCP | Process: chrome (PID: 1234) | Local: 192.168.1.2:51234 | Remote: 8.8.8.8:443`
 - **CSV**: `timestamp,protocol,process_name,process_path,pid,local_ip,local_port,remote_ip,remote_port,status`
 - **JSON**: `{"timestamp": "2024-10-26 14:30:45", "protocol": "TCP", ...}`
 
----
+```
 
 ## Requirements
 
@@ -64,16 +64,16 @@ Ensure you have the necessary permissions to access network and process data.
 - **Log Directory**: Customize the directory where logs are saved (logs by default).
 - **Batch Size and Interval**: Configure batch size and time intervals for logging in the monitor() method.
 
----
+
 
 ### Example Code Snippet
 
----
+```
 
 monitor = ConnectionMonitor(log_dir="custom_logs")  
 monitor.monitor(interval=2, batch_size=100)
 
----
+```
 
 ## Additional Enhancements
 
