@@ -1,5 +1,7 @@
 
-# Monitoring Outgoing Connections 10/2024 - Version 2 - dev status
+# Monitoring Outgoing (TCP/UDP) Connections
+##### v2 - dev status
+###### 10/2024 
 
 Join us in safeguarding our digital world, one connection at a time. This Python script actively monitors outgoing (TCP/UDP) connections, helping users stay alert to potential security threats, such as ransomware, spyware, or other suspicious network activities.
 
