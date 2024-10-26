@@ -1,4 +1,4 @@
-# Monitoring Outgoing TCP-Connections
+# Monitoring Outgoing TCP-Connections (dev - version 2)
 
 
 This Python script is a handy tool to monitor outgoing network activity. It can be particularly useful in detecting potential security threats such as ransomware, spyware, or trojan activity.
@@ -35,3 +35,50 @@ Please note that this script runs indefinitely. To stop the script, use CTRL+C o
 
 ## License
 This project is copyright by © [VolkanSah](https://github.com/volkansah) 
+
+added:
+
+ wichtigsten Änderungen:
+```
+Strukturierte Klasse:
+
+Bessere Organisation des Codes durch OOP
+Einfachere Wartung und Erweiterbarkeit
+
+
+Verbesserte Logging:
+
+Separate Log-Dateien mit Zeitstempel
+Drei Formate: TXT, CSV und JSON
+Strukturierte und leicht lesbare Log-Einträge
+
+
+Neue Features:
+
+Protokoll-Erkennung (TCP/UDP)
+Prozess-Pfad-Information
+Fehlerbehandlung für Prozessinformationen
+Konfigurierbare Batch-Größe und Intervalle
+
+
+Log-Format:
+
+Zeitstempel zu Beginn jedes Eintrags
+Klare Trennung der Informationen
+Bessere Lesbarkeit durch formatierte Ausgabe
+
+
+Zusätzliche Verbesserungen:
+
+Typenhinweise für bessere Code-Qualität
+Konfigurierbare Log-Verzeichnisse
+Graceful Shutdown mit KeyboardInterrupt
+
+
+```
+Die Logs werden jetzt so formatiert:
+```
+TXT: [2024-10-26 14:30:45] TCP | Process: chrome (PID: 1234) | Local: 192.168.1.2:51234 | Remote: 8.8.8.8:443
+CSV: timestamp,protocol,process_name,process_path,pid,local_ip,local_port,remote_ip,remote_port,status
+JSON: {"timestamp": "2024-10-26 14:30:45", "protocol": "TCP", ...}
+```
